@@ -5,11 +5,21 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>WhoisApp</PackageId>
+    <Title>WhoIs App | retrieving WhoIs data</Title>
+    <Company>LukaSoft</Company>
+    <Authors>Lukas Caniga</Authors>
+    <PackageProjectUrl>https://github.com/Marbulinek/WhoIsApp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Marbulinek/WhoIsApp.git</RepositoryUrl>
+    <PackageTags>whois</PackageTags>
+    <Version>1.0.1</Version>
+    <Description>WhoIs App is application to retrieve public data about domains, owners. Project contains library which is able to retrieve WHOIS data.</Description>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="String.Similarity" Version="3.0.0" />
-    <PackageReference Include="WhoisClient.NET" Version="4.0.0" />
+    <PackageReference Include="WhoisClient.NET" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
