@@ -2,6 +2,6 @@
 {
     public class ProbabilityItem : PropertyItem
     {
-        public double Similiarity { get; set; }
+        public double Similiarity { get; init; }
     }
 }

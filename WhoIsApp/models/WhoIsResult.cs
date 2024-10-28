@@ -2,71 +2,36 @@
 {
     public class WhoIsResult
     {
-        public DomainEntity Domain{get;set;}
-        public MainInfo Registrant { get; set; }
-
-        public WhoIsResult()
-        {
-            Domain = new DomainEntity();
-            Registrant = new MainInfo();
-        }
+        public DomainEntity Domain{get;set;} = new();
+        public MainInfo Registrant { get; set; } = new();
     }
 
     public class DomainEntity
     {
-        public string Name { get; set; }
-        public string CreatedDate { get; set; }
-        public string LastUpdateDate { get; set; }
-        public string ExpireDate { get; set; }
-
-        public DomainEntity()
-        {
-            Name = string.Empty;
-            CreatedDate = string.Empty;
-            LastUpdateDate = string.Empty;
-            ExpireDate = string.Empty;
-        }
+        public string Name { get; set; } = string.Empty;
+        public string CreatedDate { get; set; } = string.Empty;
+        public string LastUpdateDate { get; set; } = string.Empty;
+        public string ExpireDate { get; set; } = string.Empty;
     }
 
     public class MainInfo
     {
-        public string Name { get; set; }
-        public Organization Organization { get; set; }
-        public Address Address { get; set; }
-        public string Email { get; internal set; }
-
-        public MainInfo()
-        {
-            Name = string.Empty;
-            Email = string.Empty;
-            Organization = new Organization();
-            Address = new Address();
-        }
+        public string Name { get; set; } = string.Empty;
+        public Organization Organization { get; set; } = new();
+        public Address Address { get; set; } = new();
+        public string Email { get; internal set; } = string.Empty;
     }
 
     public class Organization
     {
-        public string Name { get; set; }
-
-        public Organization()
-        {
-            Name = string.Empty;
-        }
+        public string Name { get; set; } = string.Empty;
     }
 
     public class Address
     {
-        public string Street { get; set; }
-        public string City { get; set; }
-        public string PostalCode { get; set; }
-        public string CountryCode { get; set; }
-
-        public Address()
-        {
-            Street = string.Empty;
-            City = string.Empty;
-            PostalCode = string.Empty;
-            CountryCode = string.Empty;
-        }
+        public string Street { get; set; } = string.Empty;
+        public string City { get; set; } = string.Empty;
+        public string PostalCode { get; set; } = string.Empty;
+        public string CountryCode { get; set; } = string.Empty;
     }
 }

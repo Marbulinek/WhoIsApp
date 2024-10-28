@@ -2,8 +2,8 @@
 {
     public class PropertyItem
     {
-        public int PositionFound { get; set; }
-        public string Key { get; set; }
-        public string Value { get; set; }
+        public int PositionFound { get; init; }
+        public required string Key { get; init; }
+        public required string Value { get; init; }
     }
 }

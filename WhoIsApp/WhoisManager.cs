@@ -7,19 +7,14 @@ namespace WhoIsApp
 {
     public class WhoisManager
     {
-        private WhoisParser _parserService;
-
-        public WhoisManager()
-        {
-            _parserService = new WhoisParser();
-        }
+        private readonly WhoisParser _parserService = new();
 
         public Result<WhoIsResult> RetrieveData(string url)
         {
             var result = new Result<WhoIsResult>();
             try
             {
-                WhoisResponse response = WhoisClient.Query(url, encoding: Encoding.UTF8);
+                var response = WhoisClient.Query(url, encoding: Encoding.UTF8);
                 if (response != null)
                 {
                     result.Payload = _parserService.Parse(response.Raw);
